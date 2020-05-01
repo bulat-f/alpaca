@@ -8,12 +8,6 @@ enum Emphasis {
   warning = "warning",
 }
 
-const EMPHASIS = {
-  primary: "primary",
-  secondary: "secondary",
-  warning: "warning",
-};
-
 const COLORS = {
   [Emphasis.primary]: "primary",
   [Emphasis.secondary]: "secondary",
@@ -28,7 +22,7 @@ interface IProps extends SemanticButton {
 }
 
 export const Button = styled(SemanticButton).attrs(({ emphasis }: IProps) =>
-  emphasis !== EMPHASIS.secondary
+  emphasis !== Emphasis.secondary
     ? {
         primary: true,
       }
